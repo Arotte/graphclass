@@ -1,19 +1,3 @@
-/*****************************************************************\
-|	Features of the Graph class                                   |
-|                                                                 |
-|	>Supports directed/not directed graphs                        |
-|	>Basic functions:                                             |
-|		>Add/delete vertices                                      |
-|		>Add/delete edges                                         |
-|                                                                 |
-|		>Create graph with fixed number of points (without edges) |
-|                                                                 |
-|	>Graph Algorithms:                                            |
-|		>DFS                                                      |
-|		>BFS                                                      |
-|	                                                              |
-\*****************************************************************/
-
 #include "Graph.h"
 #include <iostream>
 
@@ -22,7 +6,7 @@ using namespace std;
 int main() {
 
 	int noOfVertices = 10;
-	Graph mygraph(noOfVertices); /**/
+	Graph mygraph(noOfVertices);
 
 	/** Add edges to 'mygraph' **/
 	for (int i = 0; i < noOfVertices; i++) {
@@ -48,7 +32,7 @@ int main() {
 	cout << "Adacency matrix of 'mygraph2':" << endl;
 	mygraph2.printAdjM();
 
-    /** Testing operator== **/
+        /** Testing operator== **/
 	if (mygraph2 == mygraph) cout << "'mygraph2' indeed equals to 'mygraph'" <<endl;
 
 	/** DFS **/
@@ -60,11 +44,11 @@ int main() {
 
 	/** BFS **/
 	int bfsStartVertex = 0;
-    for(int i=0; i<noOfVertices; ++i) visited[i] = 0;
-    cout << "\nTraversal order of BFS search on 'mygraph' starting from vertex "<<bfsStartVertex<<endl;
-    cout << bfsStartVertex << " ";
-    mygraph.runBFS(bfsStartVertex, visited);
-    delete[] visited;
+        for(int i=0; i<noOfVertices; ++i) visited[i] = 0;
+        cout << "\nTraversal order of BFS search on 'mygraph' starting from vertex "<<bfsStartVertex<<endl;
+        cout << bfsStartVertex << " ";
+        mygraph.runBFS(bfsStartVertex, visited);
+        delete[] visited;
 
 
 	//getchar(c);
