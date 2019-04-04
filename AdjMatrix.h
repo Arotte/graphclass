@@ -1,11 +1,5 @@
-/**************\
-| AdjMatrix.h  |
-\**************/
-
 /** Adjacency Matrix class for representing graphs **/
-
 #pragma once
-
 
 class AdjMatrix {
 	private:
@@ -14,9 +8,7 @@ class AdjMatrix {
 
 		//int* visited;
 	public:
-		/* Constructor */
 		AdjMatrix(int);
-		/* Destructor */
 		~AdjMatrix();
 
 		/* Accessing operator */
@@ -32,8 +24,8 @@ class AdjMatrix {
         void equalTo(AdjMatrix&);
 
 
-		/************** HELPER FUNCTIONS *****************/
-		/* Memory allocator */
+	/************** HELPER FUNCTIONS *****************/
+	/* Memory allocator */
         void allocate(int** &ptr);
         /* Is null matrix? */
         bool isNullMatrix() const;
