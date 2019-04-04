@@ -1,19 +1,9 @@
-/************\
-| Graph.cpp  |
-\************/
-
-#include "AdjMatrix.h" /* Use a matrix class for representing graphs (adjacency matrix) */
+#include "AdjMatrix.h"
 #include "Graph.h"
 #include <iostream>
 
 using namespace std;
 
-
-/************************************************\
-                 Basic functions
-\************************************************/
-
-/* Constructor: fix no. of points */
 Graph::Graph(int noOfVertices) {
     size = noOfVertices;
 	/* Allocating space for the Matrix object */
@@ -22,8 +12,6 @@ Graph::Graph(int noOfVertices) {
 	//cout<<"Graph with "<< noOfVertices <<" vertices created." <<endl;
 }
 
-
-/* Destructor */
 Graph::~Graph() {
 	delete adjM;
 
@@ -42,7 +30,6 @@ void Graph::addEdge(int vertex1, int vertex2) {
     //cout<<"Directed edge added between vertex "<<vertex1<<" and "<<vertex2<<"."<<endl;
 }
 
-/* Delete an edge */
 void Graph::delEdge(int vertex1, int vertex2) {
 
     if(vertex1 >= 0 && vertex1 <= this->size-1 &&
@@ -64,7 +51,7 @@ void Graph::delUndEdge(int v1, int v2) {
     delEdge(v1, v2);
     delEdge(v2, v1);
 }
-/*  */
+
 void Graph::addVertex() {
 
     (*adjM).addColAndRow();
@@ -125,10 +112,6 @@ void Graph::printAdjM() const {
 int Graph::getSize() const { return this->size; }
 
 
-/************************************************\
-                  Graph algorithms
-\************************************************/
-
 /** Recursive function **/
 void Graph::runDFS(int start, int* visited) {
 
@@ -170,14 +153,6 @@ void Graph::runBFS(int start, int* visited, int prevStart) {
             (*this).runBFS(k, visited, start);
 
 }
-
-/************************************************\
-                   More features
-\************************************************/
-
-// ....
-
-/** NON-MEMBER FUNCTIONS **/
 
 void printPath(int* path, int length) {
     cout << endl;
