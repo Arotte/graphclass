@@ -1,9 +1,3 @@
-/***************\
-| AdjMatrix.cpp |
-\***************/
-
-/** TODO: függvénypointerekkel(??) megoldani a mátrix memory allocation + adatmásolást ***/
-
 #include "AdjMatrix.h"
 #include<iostream>
 
