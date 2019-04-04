@@ -1,4 +1,4 @@
-# graphlib
+# graphclass
 
 The program handles basic graph algorithms and operations (not in the most effective way, though).  
 Features:  
